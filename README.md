@@ -4,6 +4,11 @@
 Creating a Machine Learning model to predict the home prices in Bangalore, India. We are going to use the dataset from Kaggle.com.
 We are also going to create a single page website which will provide the front end to access our model for predictions.
 
+## Output:
+<img width="1280" alt="Screenshot 2023-11-02 at 12 44 17 PM" src="https://github.com/Nikhil0414/Housing-price-prediction-using-supervised-machine-learning-algorithms/assets/58047550/b12e140f-0152-4fc5-bd6f-e1da4a133bee">
+
+
+
 Below data science concepts are used in this project
 * Data loading and cleaning
 * Outlier detection and removal
