@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: green;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        p {
+            text-align: center;
+            color: black;
+            font-size: 32px;
+            font-weight: bold;
+            white-space: pre-line; /* Preserve line breaks */
+            animation: fadeIn 1s ease-in-out; /* Add the fade-in animation */
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>HOUSING PRICE PREDICTION USING SUPERVISED MACHINE LEARNING ALGORITHM</h1>
+        <h2>Lets Predict Bengaluru House Prices </h2>
+
+    <form action="/predict" method="POST">
+    Location: <input type="text" name="location" value="{{ request.form['location'] }}" required><br>
+    Sqft: <input type="number" name="sqft" value="{{ request.form['sqft'] }}" required><br>
+    Bathrooms: <input type="number" name="bath" value="{{ request.form['bath'] }}" required><br>
+    BHK: <input type="number" name="bhk" value="{{ request.form['bhk'] }}" required><br>
+    <input type="submit" value="Predict Price">
+    </form>
+
+    
+    {% if predicted_price %}
+        <p>{{ predicted_price }}</p>
+    {% endif %}
+</body>
+</html>
